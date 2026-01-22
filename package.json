@@ -1,0 +1,29 @@
+{
+    "name": "gmail-agent-pro-backend",
+    "version": "1.0.0",
+    "type": "module",
+    "description": "AI-Powered Gmail Agent Backend",
+    "main": "server/index.js",
+    "scripts": {
+        "start": "node server/index.js",
+        "dev": "nodemon server/index.js"
+    },
+    "keywords": [
+        "gmail",
+        "ai",
+        "automation"
+    ],
+    "author": "Infinite Club",
+    "license": "MIT",
+    "dependencies": {
+        "express": "^4.18.2",
+        "cors": "^2.8.5",
+        "dotenv": "^16.3.1",
+        "googleapis": "^128.0.0",
+        "openai": "^4.20.0",
+        "firebase-admin": "^12.0.0"
+    },
+    "devDependencies": {
+        "nodemon": "^3.0.1"
+    }
+}
