@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import axios from 'axios';
+import axios from '../lib/api';  // Custom axios with base URL
 import {
     Mail, Sparkles, Zap, TrendingUp, Bot, Power, Star,
     RefreshCw, LogOut, Search, Filter, Send, Briefcase, AlertTriangle, Loader2, Activity,
