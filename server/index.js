@@ -47,13 +47,7 @@ const ALLOWED_ORIGINS = [
 
 // Middleware
 app.use(cors({
-    origin: function (origin, callback) {
-        if (!origin || ALLOWED_ORIGINS.includes(origin)) {
-            callback(null, true);
-        } else {
-            callback(new Error('Not allowed by CORS'));
-        }
-    },
+    origin: true, // Allow all origins for cloud deployment
     credentials: true
 }));
 app.use(express.json());
@@ -1581,7 +1575,7 @@ app.post('/api/emails/bulk-delete', async (req, res) => {
 
 // Start the worker
 runAutoReplyWorker();
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
     console.log(`
 🚀 Gmail Agent Pro Backend - GEMINI AI POWERED
 📡 Server: http://localhost:${PORT}
