@@ -151,6 +151,19 @@ app.get('/health', (req, res) => {
     });
 });
 
+// Root route
+app.get('/', (req, res) => {
+    res.json({
+        name: 'Infinite Club Gmail Agent Pro',
+        status: 'running',
+        version: '1.0.0',
+        endpoints: {
+            health: '/health',
+            auth: '/auth/url'
+        }
+    });
+});
+
 // ===== AUTHENTICATION ROUTES =====
 
 // Get OAuth URL
